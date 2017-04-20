@@ -20,11 +20,11 @@ CASSANDRA_DRIVER_VERSION=3.0.0
 
 # Setup download URLs
 declare -a urls=(
-"${base_url}org/apache/cassandra/cassandra-all/${CASSANDRA_VERSION}/cassandra-all-${CASSANDRA_VERSION}.jar"
-"${base_url}com/datastax/cassandra/cassandra-driver-core/${CASSANDRA_DRIVER_VERSION}/cassandra-driver-core-${CASSANDRA_DRIVER_VERSION}.jar"
-"${base_url}com/datastax/cassandra/cassandra-driver-mapping/${CASSANDRA_DRIVER_VERSION}/cassandra-driver-mapping-${CASSANDRA_DRIVER_VERSION}.jar"
-"${base_url}io/netty/netty-all/4.0.33.Final/netty-all-4.0.33.Final.jar"
-"${base_url}io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"
+"${BASE_URL}org/apache/cassandra/cassandra-all/${CASSANDRA_VERSION}/cassandra-all-${CASSANDRA_VERSION}.jar"
+"${BASE_URL}com/datastax/cassandra/cassandra-driver-core/${CASSANDRA_DRIVER_VERSION}/cassandra-driver-core-${CASSANDRA_DRIVER_VERSION}.jar"
+"${BASE_URL}com/datastax/cassandra/cassandra-driver-mapping/${CASSANDRA_DRIVER_VERSION}/cassandra-driver-mapping-${CASSANDRA_DRIVER_VERSION}.jar"
+"${BASE_URL}io/netty/netty-all/4.0.33.Final/netty-all-4.0.33.Final.jar"
+"${BASE_URL}io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"
 )
 
 # Download dependencies
