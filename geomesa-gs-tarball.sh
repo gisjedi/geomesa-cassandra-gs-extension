@@ -5,6 +5,9 @@ SCALA_VERSION=2.11
 GEOMESA_VERSION=1.3.1
 CASSANDRA_VERSION=3.0.10
 CASSANDRA_DRIVER_VERSION=3.0.0
+GS_PLUGIN_LIST=wps-plugin
+GEOSERVER_VERSION=2.11.0
+GS_PLUGIN_URL=http://downloads.sourceforge.net/project/geoserver/GeoServer/${GEOSERVER_VERSION}/extensions
 
 mkdir temp
 cd temp
@@ -37,6 +40,12 @@ done
 if [[ -n "${errorList}" ]]; then
 echo "Failed to download: ${NL} ${errorList[@]}";
 fi
+
+for PLUGIN in $GS_PLUGIN_LIST; \
+    do curl -L $GS_PLUGIN_URL/geoserver-$GEOSERVER_VERSION-$PLUGIN.zip > plugin.zip \
+    && unzip -o plugin.zip \
+    && rm plugin.zip; \
+    done
 
 tar cfv ../geomesa-cassandra-gs-plugin-${GEOMESA_VERSION}-${CASSANDRA_VERSION}.tar.gz .
 cd ..
